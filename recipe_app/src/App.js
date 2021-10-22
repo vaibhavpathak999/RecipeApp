@@ -1,44 +1,42 @@
-import './App.css';
-import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import React, { useEffect, createContext, useReducer, useContext } from 'react';
+import NavBar from './pages/layout/Navbar';
+// import "./App.css"
+import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
+import { reducer, initialState } from "./reducers/useReducer";
+import Home from "./../src/pages/Homepage";
+export const UserContext = createContext()
 
-//Components
-import Homepage from './pages/Homepage';
-import Navbar from './pages/layout/Navbar';
-
-import Routes from './pages/routing/Routes';
-import { ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-//Redux
-import { Provider } from 'react-redux';
-import store from './redux/store';
-import { loadUser } from './redux/actions/auth';
-
-import setAuthToken from './helpers/setAuthToken';
-
-if (localStorage.token) {
-  setAuthToken(localStorage.token);
+const Routing = () => {
+  const history = useHistory()
+  const { state, dispatch } = useContext(UserContext)
+  useEffect(() => {
+    const user = JSON.parse(localStorage.getItem("user"))
+    if (user) {
+      dispatch({ type: "USER", payload: user })
+    } else {
+      if (!history.location.pathname.startsWith('/reset'))
+        history.push('/signin')
+    }
+  }, [])
+  return (
+    <Switch>
+      <Route exact path="/" >
+        <Home />
+      </Route>
+    </Switch>
+  )
 }
 
 function App() {
-  useEffect(() => {
-    store.dispatch(loadUser());
-  }, []);
-
+  const [state, dispatch] = useReducer(reducer, initialState)
   return (
-    <Provider store={store}>
-      <Router>
-        <>
-          <Navbar/>
-          <ToastContainer newestOnTop autoClose={2000} />
+    <UserContext.Provider value={{ state, dispatch }}>
+      <BrowserRouter>
+        <NavBar />
+        <Routing />
 
-          <Switch>
-            <Route exact path="/" component={Homepage} />
-            <Route component={Routes} />
-          </Switch>
-        </>
-      </Router>
-    </Provider>
+      </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 
