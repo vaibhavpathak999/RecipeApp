@@ -17,7 +17,7 @@ export default class Home extends Component {
             </div>
 
             <div className="image-content col-sm-12 col-md-6">
-              <img src={MainImage} href="" alt="" />
+              <img src={MainImage} href="" alt="foodplate image" />
             </div>
           </div>
 

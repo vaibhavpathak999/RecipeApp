@@ -1,9 +1,13 @@
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
 import NavBar from './pages/layout/Navbar';
-// import "./App.css"
+import "./App.css";
+import SignIn from "./pages/auth/Login";
+import SignUp from "./pages/auth/Register";
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 import { reducer, initialState } from "./reducers/useReducer";
 import Home from "./../src/pages/Homepage";
+import Reset from "./pages/auth/ResetPassword";
+import NewPassword from "./pages/auth/NewPassword";
 export const UserContext = createContext()
 
 const Routing = () => {
@@ -20,9 +24,21 @@ const Routing = () => {
   }, [])
   return (
     <Switch>
-      <Route exact path="/" >
-        <Home />
-      </Route>
+      {/* Home route */}
+      <Route exact path="/" ><Home /></Route>
+
+      {/* SignIn route */}
+      <Route path="/signin"><SignIn /></Route>
+
+      {/* SignUp route */}
+      <Route path="/signup"><SignUp /></Route>
+
+      {/* Reseting Password Route */}
+      <Route exact path="/reset"><Reset /></Route>
+
+      {/* Route for generating new Password */}
+      <Route path="/reset/:token"><NewPassword /></Route>
+
     </Switch>
   )
 }

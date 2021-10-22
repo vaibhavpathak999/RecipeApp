@@ -9,9 +9,6 @@ const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
 const { SENDGRID_KEY, EMAIL, JWT_SECRET } = require("../config/dev.js");
 
-
-// require('dotenv').config({ path: '.env' });
-
 const transporter = nodemailer.createTransport(sendgridTransport({
     auth: {
         api_key: SENDGRID_KEY
@@ -63,11 +60,8 @@ router.post('/signup', (req, res) => {
 })
 
 
-
-
-
     router.post('/signin', (req, res) => {
-        const { email, password } = req.body
+        const { email, password } = req.body;
         if (!email || !password) {
             return res.status(422).json({ error: "please add email or password" })
         }
