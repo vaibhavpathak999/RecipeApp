@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 export default class Home extends Component {
   render() {
     return (
-      <div className="container-fluid main-page" style={{ padding: "0px" }}>
+      <div className="container-fluid main-page" style={{ padding: "1% 15% 0% 10%" }}>
         <div className="home-container">
           <div className="row align-items-center">
             <div className="text-content col-sm-12 col-md-6">

@@ -1,7 +1,7 @@
-const jwt = require('jsonwebtoken');
-const {JWT_SECRET} = require("../config/dev.js");
-const mongoose = require('mongoose');
-const User = mongoose.model("User");
+const jwt = require('jsonwebtoken')
+const {JWT_SECRET} = require("../config/dev");
+const mongoose = require('mongoose')
+const User = mongoose.model("User")
 
 module.exports = (req,res,next)=>{
     const {authorization} = req.headers
@@ -18,6 +18,6 @@ module.exports = (req,res,next)=>{
         User.findById(_id).then(userdata=>{
             req.user = userdata
             next()
-        }) 
+        })  
     })
 }

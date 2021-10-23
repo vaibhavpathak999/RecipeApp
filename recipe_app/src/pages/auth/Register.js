@@ -1,7 +1,7 @@
 import React,{useState,useEffect} from 'react'
 import {Link,useHistory} from 'react-router-dom'
 import M from 'materialize-css'
-import signupImage from "../../images/1.png";
+import signupImage from "./../../images/1.png"
 const SignUp  = ()=>{
     const history = useHistory()
     const [name,setName] = useState("")
@@ -96,9 +96,12 @@ const SignUp  = ()=>{
                 onChange={(e)=>setPasword(e.target.value)}
                 />
                 <div className="file-field input-field">
-                <div className="">
+                <div className="btn btn-warning #64b5f6 darken-1">
                     <span style={{color:"#000"}}>Upload Pic</span>
                     <input type="file" onChange={(e)=>setImage(e.target.files[0])} />
+                </div>
+                <div className="file-path-wrapper">
+                    <input className="file-path validate" type="text" />
                 </div>
                 </div>
                 <button className="btn btn-success waves-effect waves-light #64b5f6 darken-1"
@@ -109,7 +112,7 @@ const SignUp  = ()=>{
                 </button>
                 <h5>
                     <Link to="/signin" className="links-text">Already have an account ?</Link>
-                </h5>
+                </h5>    
             </div>
         </div>
       </div>

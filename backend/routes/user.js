@@ -1,7 +1,8 @@
 const express = require('express')
 const router = express.Router()
 const mongoose = require('mongoose')
-const userLogin = require("../middleware/userLogin");
+const userLogin  = require('../middleware/userLogin')
+const Recipe =  mongoose.model("Recipe")
 const User = mongoose.model("User")
 
 

@@ -5,15 +5,15 @@ const userLogin = require("../middleware/userLogin");
 const Recipe =  mongoose.model("Recipe")
 
 router.post('/addrecipe',userLogin,(req,res)=>{
-    const {title, ingredients, steps, pic} = req.body 
-    if(!title || !ingredients || !steps || !pic){
+    const {recipe_title, recipe_ingredients, recipe_instructions, pic} = req.body 
+    if(!recipe_title || !recipe_ingredients || !recipe_instructions || !pic){
       return  res.status(422).json({error:"Please add all the fields"})
     }
     req.user.password = undefined
     const recipe = new Recipe({
-        title,
-        ingredients,
-        steps,
+        title : recipe_title,
+        ingredients : recipe_ingredients,
+        steps : recipe_instructions,
         photo:pic,
         postedBy:req.user
     })
@@ -48,11 +48,14 @@ router.put('/updaterecipe/:id',userLogin,(req,res)=>{
         console.log("recipe", recipe)
         if (!recipe)
         return res.status(200).json({error:"recipe is not found!"})
-        else
-            recipe.title = req.body.title;
-            recipe.ingredients = req.body.ingredients;
-            recipe.steps = req.body.steps;
-            recipe.recipe_favourite = req.body.recipe_favourite;
+        else {
+            const {recipe_title, recipe_ingredients, recipe_instructions, pic} = req.body 
+            if(!recipe_title || !recipe_ingredients || !recipe_instructions || !pic){
+                return  res.status(422).json({error:"Please add all the fields"})
+                }
+            recipe.title = req.body.recipe_title;
+            recipe.ingredients = req.body.recipe_ingredients;
+            recipe.steps = req.body.recipe_instructions;
             recipe.photo = req.body.pic;
 
             recipe.save().then(recipe => {
@@ -61,6 +64,7 @@ router.put('/updaterecipe/:id',userLogin,(req,res)=>{
             .catch(err => {
                 return res.status(422).json({error:"Cannot Update recipe!"})
             });
+        }
     });
 })
 

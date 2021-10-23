@@ -14,7 +14,7 @@ const NavBar = () => {
     if (state) {
       return [
         <li key="2"><Link to="/profile" style={{ textDecoration: "none", fontSize: "17px" }}>Profile</Link></li>,
-        <li key="3"><Link to="/create" style={{ textDecoration: "none", fontSize: "17px" }}>Create Contact</Link></li>,
+        <li key="3"><Link to="/add" style={{ textDecoration: "none", fontSize: "17px" }}>Add Recipe</Link></li>,
         <li key="5">
           <button className="btn #c62828 btn-primary darken-3"
             style={{ margin: " auto 12px auto 2px" }}

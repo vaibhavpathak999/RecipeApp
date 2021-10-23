@@ -1,13 +1,19 @@
 import React, { useEffect, createContext, useReducer, useContext } from 'react';
-import NavBar from './pages/layout/Navbar';
 import "./App.css";
-import SignIn from "./pages/auth/Login";
-import SignUp from "./pages/auth/Register";
 import { BrowserRouter, Route, Switch, useHistory } from 'react-router-dom'
 import { reducer, initialState } from "./reducers/useReducer";
-import Home from "./../src/pages/Homepage";
+
+// auth related pages
+import SignIn from "./pages/auth/Login";
+import SignUp from "./pages/auth/Register";
 import Reset from "./pages/auth/ResetPassword";
 import NewPassword from "./pages/auth/NewPassword";
+
+//layout pages
+import NavBar from './pages/layout/Navbar';
+import Home from "./../src/pages/Homepage";
+import AddRecipe from './pages/dashboard/Recipe';
+
 export const UserContext = createContext()
 
 const Routing = () => {
@@ -39,6 +45,9 @@ const Routing = () => {
       {/* Route for generating new Password */}
       <Route path="/reset/:token"><NewPassword /></Route>
 
+      {/* Add Recipe  */}
+      <Route exact path="/add"><AddRecipe /></Route>
+
     </Switch>
   )
 }
@@ -50,7 +59,6 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routing />
-
       </BrowserRouter>
     </UserContext.Provider>
   );

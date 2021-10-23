@@ -1,8 +1,8 @@
 import React, { useState, useContext, } from 'react'
 import { Link, useHistory } from 'react-router-dom'
-import { UserContext } from "../../App";
+import { UserContext } from '../../App'
 import M from 'materialize-css'
-import loginImage from "../../images/3.png"
+import loginImage from "./../../images/3.png"
 
 const SignIn = () => {
     const { state, dispatch } = useContext(UserContext)
