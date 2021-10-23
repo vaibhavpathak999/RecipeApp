@@ -36,3 +36,35 @@
 .number3 {
     font-weight: 500
 }
+
+.ingredients {
+    margin:5px 20px 20px 0px;
+    color: white;
+    text-align: center;
+    height: 45px;
+    width: auto;
+    background-color: #212121;
+    border-radius: 5%;
+    display: inline-block;
+    padding: 2.5%;
+}
+.ingredients:hover {
+    background-color: #ffea00;
+    color: black;
+}
+
+.instructions {
+    margin: 5px;
+}
+.recipeImage {
+    max-width: 450px;
+    max-height: 300px;
+    width: auto;
+    height: auto;
+    margin: 10px auto;
+}
+
+.labelClass {
+    color: #424242;
+    font-size: 15px;
+}

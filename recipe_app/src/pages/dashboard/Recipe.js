@@ -3,6 +3,7 @@ import M from 'materialize-css'
 import { useHistory } from 'react-router-dom'
 import { produce } from "immer";
 import Card from './Card.js';
+import "../css/dashboard.css";
 
 const AddRecipe = () => {
     const history = useHistory()
@@ -33,7 +34,7 @@ const AddRecipe = () => {
                     }
                     else {
                         M.toast({ html: "Created Contact Successfully", classes: "#43a047 green darken-1" })
-                        history.push('/')
+                        history.push('/myrecipes')
                     }
                 }).catch(err => {
                     console.log(err)
@@ -63,6 +64,14 @@ const AddRecipe = () => {
 
     const cardInputFeildStyle = {
         margin: "30px auto",
+        maxWidth: "500px",
+        padding: "20px",
+        textAlign: "center",
+        width:"500px" 
+    }
+
+    const inputStyle = {
+        margin: "10px auto 15px",
         maxWidth: "500px",
         padding: "20px",
         textAlign: "center"
@@ -98,8 +107,9 @@ const AddRecipe = () => {
                     onChange={(e) => setRecipeTitle(e.target.value)}
                 />
 
+                <label for="ingredients" className="labelClass">Ingredients</label>
                 {/* ingredients new input */}
-                <div className="card input-filed" style={cardInputFeildStyle}>
+                <div className="card" id="ingredients" style={inputStyle}>
                     {recipe_ingredients.map((ingredient, index) => {
                         return <Card ingred={ingredient} index={index} deleteIngredient={deleteIngredient} setRecipeIngredients={setRecipeIngredients} propName={"Enter Ingredient"}/>
                     })}
@@ -108,7 +118,9 @@ const AddRecipe = () => {
                 {/* ingredients input ends */}
 
                 {/* ingredients new input */}
-                <div className="card input-filed" style={cardInputFeildStyle}>
+
+                <label for="Instructions" className="labelClass">Instructions</label>
+                <div className="card" id="Instructions" style={inputStyle}>
                     {recipe_instructions.map((instruction, index) => {
                         return <Card ingred={instruction} index={index} deleteIngredient={deleteInstruction} setRecipeIngredients={setRecipeInstructions} propName={"Enter Instruction"} />
                        

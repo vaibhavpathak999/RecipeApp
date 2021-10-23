@@ -13,6 +13,7 @@ import NewPassword from "./pages/auth/NewPassword";
 import NavBar from './pages/layout/Navbar';
 import Home from "./../src/pages/Homepage";
 import AddRecipe from './pages/dashboard/Recipe';
+import Dashboard from './pages/dashboard/Dashboard';
 
 export const UserContext = createContext()
 
@@ -47,6 +48,9 @@ const Routing = () => {
 
       {/* Add Recipe  */}
       <Route exact path="/add"><AddRecipe /></Route>
+
+      {/* profile Page */}
+      <Route exact path="/myrecipes"><Dashboard /></Route>
 
     </Switch>
   )
