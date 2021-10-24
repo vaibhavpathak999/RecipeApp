@@ -89,13 +89,7 @@ const Dashboard = () => {
                                             
                                             <div className="button mt-2 d-flex flex-row align-items-center" style={{ marginLeft: "25px" }} >
                                                 <button className="btn btn-danger" onClick={() => deleteContact(item._id)}><i className="fa fa-trash fa-2x"></i></button>
-
-                                                <button className="btn btn-success" style={{ marginLeft: "15px" }}><Link to={"/updatecontact/" + item._id} style={{ textDecoration: "none" }}><i className="fa fa-pencil fa-2x" style={{ color: "white" }}></i></Link> </button>
-                                                <button className="btn btn-dark" style={{ marginLeft: "15px" }}><i className={item.contact_favourite ? 'fa fa-star favourite fa-2x' : 'fa fa-star nonFavourite fa-2x'} style={{ display: "inline-block" }}></i></button>
-
-                                                {/* <i className="fa fa-trash fa-2x" style={{ color: "#D54C4C", paddingLeft: "20px", float: "left", display: "inline-block", marginRight:"10px"}} onClick={() => deleteContact(item._id)}></i>
-                                                <button className="btn btn-light" style={{marginLeft:"15px"}}><i className={item.contact_favourite ? 'fa fa-star favourite fa-2x' : 'fa fa-star fa-2x'} ></i></button>
-                                                <Link to={"/updatecontact/" + item._id} style={{ textDecoration: "none" }}><i className="fa fa-pencil fa-2x" style={{color:"green"}}></i></Link> */}
+                                                <button className="btn btn-success" style={{ marginLeft: "15px" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none" }}><i className="fa fa-pencil fa-2x" style={{ color: "white" }}></i></Link> </button>
                                             </div>
                                         </div>
                                     </div>

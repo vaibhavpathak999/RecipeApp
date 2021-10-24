@@ -28,8 +28,7 @@ function Card({ ingred, index, deleteIngredient, setRecipeIngredients, propName 
             </div>
             <div>
             <button className="btn btn-warning waves-effect waves-light #66bb6a green lighten-1" style={{ margin: "0px 0px 0px 10px" }} onClick={() => setValue(true)} > + </button> 
-
-             <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px" }} onClick={() => deleteIngredient(index)} > X </button> 
+            <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px" }} onClick={() => deleteIngredient(index)} > X </button> 
             </div>
         </div>
     )

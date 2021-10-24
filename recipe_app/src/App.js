@@ -14,6 +14,7 @@ import NavBar from './pages/layout/Navbar';
 import Home from "./../src/pages/Homepage";
 import AddRecipe from './pages/dashboard/Recipe';
 import Dashboard from './pages/dashboard/Dashboard';
+import Edit from './pages/dashboard/EditRecipe';
 
 export const UserContext = createContext()
 
@@ -51,6 +52,9 @@ const Routing = () => {
 
       {/* profile Page */}
       <Route exact path="/myrecipes"><Dashboard /></Route>
+
+      {/* update the recipe */}
+      <Route path="/updaterecipe/:postid"><Edit /></Route>
 
     </Switch>
   )
