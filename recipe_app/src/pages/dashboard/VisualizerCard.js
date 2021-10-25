@@ -1,23 +1,24 @@
-import React from "react";
+import React from 'react';
+import "../css/dashboard.css";
+import picture from "../../images/foodPictorial.png";
 
-export default function List({ recipes }) {
+function VisualizerCard({ title, ingredients, instructions}) {
+
     return (
-        <div>
-                {
-                    recipes.map((item, index) => {
-                        return (
-                            <div key={index + data.title} className="container mt-5 d-flex justify-content-center" >
-                                <div className="card p-3" style={{ width: 500 }}>
-                                    <img className="recipeImage" src={item.photo} />
+        <div style={{ display: "flex" }} key={`${title}`} className="container mt-5 d-flex justify-content-center">
+            
+            <div className="card p-3" style={{ width: 500 }}>
+                                    <label for="card p-3">See your recipe</label>
+                                    <img className="recipeImage" src={picture} />
                                     <div className="d-flex align-items-center" style={{ padding: "2%" }}>
 
                                         <div className="ml-3 w-100">
-                                            <h3 className="mb-0 mt-0" style={{ marginTop: "0px" }}>{item.title}</h3>
+                                            <h3 className="mb-0 mt-0" style={{ marginTop: "0px" }}>{title ? title : "Title"}</h3>
                                             <h5 className="" style={{ marginTop: "15px" }}>Ingredients</h5>
                                             <div className="">
                                                 {
 
-                                                    item.ingredients.map((ingredient, index) => {
+                                                    ingredients.map((ingredient, index) => {
                                                         if (!ingredient) return
                                                         return (
                                                             <span className="ingredients" key={ingredient + index}>{ingredient}</span>
@@ -30,7 +31,7 @@ export default function List({ recipes }) {
                                             <div className="">
                                                 {
 
-                                                    item.steps.map((instruction, index) => {
+                                                    instructions.map((instruction, index) => {
                                                         if (!instruction) return
                                                         return (
                                                             <p className="instructions" key={instruction + index}>{index}. {instruction}</p>
@@ -40,18 +41,15 @@ export default function List({ recipes }) {
                                             </div>
 
                                             <div className="button mt-2 d-flex flex-row align-items-center" style={{ marginLeft: "25px" }} >
-                                                <button className="btn btn-danger" onClick={() => deleteContact(item._id)}><i className="fa fa-trash fa-2x"></i></button>
-                                                <button className="btn btn-success" style={{ marginLeft: "15px" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none" }}><i className="fa fa-pencil fa-2x" style={{ color: "white" }}></i></Link> </button>
+                                                <button className="btn btn-danger" ><i className="fa fa-trash fa-2x"></i></button>
+                                                <button className="btn btn-success" style={{ marginLeft: "15px" }}><i className="fa fa-pencil fa-2x" style={{ color: "white" }}></i> </button>
                                             </div>
                                         </div>
                                     </div>
 
                                 </div>
-
-                            </div>
-                        )
-                    })
-                }
         </div>
     )
 }
+
+export default VisualizerCard

@@ -3,7 +3,6 @@ import { UserContext } from '../../App'
 import { Link } from 'react-router-dom'
 import 'font-awesome/css/font-awesome.min.css';
 // import Profile from './Profile';
-// import { div } from 'prelude-ls';
 import "./../css/dashboard.css"
 
 const Dashboard = () => {

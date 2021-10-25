@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react'
 import M from 'materialize-css'
 import { useHistory } from 'react-router-dom'
-import { produce } from "immer";
 import Card from './Card.js';
 import "../css/dashboard.css";
+import VisualizerCard from "./VisualizerCard";
 
 const AddRecipe = () => {
     const history = useHistory()
@@ -11,6 +11,7 @@ const AddRecipe = () => {
     var [recipe_ingredients, setRecipeIngredients] = useState([""])
     var [recipe_instructions, setRecipeInstructions] = useState([""])
     const [image, setImage] = useState("")
+    const [picture, setPicture] = useState("");
     const [url, setUrl] = useState("")
     useEffect(() => {
         if (url) {
@@ -91,11 +92,25 @@ const AddRecipe = () => {
         console.log(values)
     }
 
+    function addIngrdient(index) {
+        const values = [...recipe_ingredients];
+        values.push("");
+        setRecipeIngredients(values);
+    }
+
+    function addInstructions(index) {
+        const values = [...recipe_instructions];
+        values.push("");
+        setRecipeInstructions(values);
+    }
+
 
     return (
-        <div>
+        <div className = "flex">
             <h3 style={{ textAlign: "center", color: "#2E357E", marginTop: "50px", fontSize: "40px" }}>Add new recipe</h3>
-
+            <div>
+                <VisualizerCard  title={recipe_title} ingredients={recipe_ingredients} instructions={recipe_instructions} />
+            </div>
 
             <div className="card input-filed" style={cardInputFeildStyle}>
 
@@ -110,8 +125,11 @@ const AddRecipe = () => {
                 {/* ingredients new input */}
                 <div className="card" id="ingredients" style={inputStyle}>
                     {recipe_ingredients.map((ingredient, index) => {
-                        return <Card ingred={ingredient} index={index} deleteIngredient={deleteIngredient} setRecipeIngredients={setRecipeIngredients} propName={"Enter Ingredient"}/>
+                        return <Card ingred={ingredient} index={index} setRecipeIngredients={setRecipeIngredients} propName={"Enter Ingredient"}/>
                     })}
+                    <div>
+                        <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px" }} onClick={() => deleteIngredient(recipe_ingredients.length - 1)} > Delete </button> 
+                    </div>
                 </div>
 
                 {/* ingredients input ends */}
@@ -121,9 +139,11 @@ const AddRecipe = () => {
                 <label for="Instructions" className="labelClass">Instructions</label>
                 <div className="card" id="Instructions" style={inputStyle}>
                     {recipe_instructions.map((instruction, index) => {
-                        return <Card ingred={instruction} index={index} deleteIngredient={deleteInstruction} setRecipeIngredients={setRecipeInstructions} propName={"Enter Instruction"} />
-                       
+                        return <Card ingred={instruction} index={index} setRecipeIngredients={setRecipeInstructions} propName={"Enter Instruction"} />
                     })}
+                    <div>
+                        <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px", padding:"0px auto" }} onClick={() => deleteInstruction(recipe_instructions.length - 1)} > Delete </button> 
+                    </div>
                 </div>
 
                 {/* ingredients input ends */}
