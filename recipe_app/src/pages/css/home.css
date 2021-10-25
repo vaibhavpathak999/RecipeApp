@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap');
 
 a{
-  color: black !important;
+  color: black ;
 }
 
 .brand-logo,h2{
@@ -35,6 +35,10 @@ a{
 .item{
   width: 30%;
 }
+/* 
+.home {
+  background-color: #;
+} */
 
 .home-card{
   max-width: 500px;
@@ -128,4 +132,11 @@ a{
 .resetPasswordCard{
   width: 300px;
   padding: 3%;
+}
+
+.main-page {
+background: #8A2387;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
 }

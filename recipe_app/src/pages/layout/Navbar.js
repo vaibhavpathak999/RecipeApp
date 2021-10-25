@@ -2,6 +2,7 @@ import React, { useContext, useRef, useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { UserContext } from '../../App';
 import "./navbar.css"
+// import logo from "../../images/recipeLogo.png";
 
 const NavBar = () => {
   const [userDetails, setUserDetails] = useState([])
@@ -13,11 +14,11 @@ const NavBar = () => {
   const renderList = () => {
     if (state) {
       return [
-        <li key="2"><Link to="/myrecipes" style={{ textDecoration: "none", fontSize: "17px" }}>My Recipes</Link></li>,
-        <li key="3"><Link to="/add" style={{ textDecoration: "none", fontSize: "17px" }}>Add Recipe</Link></li>,
+        <li key="2"><Link to="/myrecipes" className="navbar-ul">My Recipes</Link></li>,
+        <li key="3"><Link to="/add" className="navbar-ul">Add Recipe</Link></li>,
         <li key="5">
-          <button className="btn #c62828 btn-primary darken-3"
-            style={{ margin: " auto 12px auto 2px" }}
+          <button className="btn btn-primary #fafafa grey lighten-5"
+            style={{ margin: " auto 12px auto 2px", color:"#424242" }}
             onClick={() => {
               localStorage.clear()
               dispatch({ type: "CLEAR" })
@@ -32,8 +33,8 @@ const NavBar = () => {
       ]
     } else {
       return [
-        <li key="6"><Link to="/signin" style={{ textDecoration: "none", fontSize: "17px"}}>SignIn</Link></li>,
-        <li key="7"><Link to="/signup" style={{ textDecoration: "none", fontSize: "17px"}}>SignUp</Link></li>
+        <li key="6"><Link to="/signin" className="navbar-ul">SignIn</Link></li>,
+        <li key="7"><Link to="/signup" className="navbar-ul">SignUp</Link></li>
 
       ]
     }
@@ -41,9 +42,10 @@ const NavBar = () => {
 
   return (
     <nav>
-      <div className="nav-wrapper" style={{ backgroundColor: "#EEC1BC" }}>
-        <Link to="/" className="brand-logo left" style={{ marginLeft: "4.2%", textDecoration: "none" }} ><span className ={"navbar-title"} style={{ color: "#2E357E" }}>MyRecipe NoteBook</span></Link>
-        <ul id="nav-mobile" className="right" >
+      <div className="nav-wrapper" style={{ backgroundColor: "#2A2A2C" }}>
+        <Link to="/" className="brand-logo left" style={{ marginLeft: "4.2%", textDecoration: "none", display:"inline" }} ><span className ={"navbar-title"} style={{ color: "white" }}>MyRecipe Diary</span></Link>
+        {/* <img scr ={logo} alt="website logo image" className={"logo"} /> */}
+        <ul id="nav-mobile" className="right">
           {renderList()}
         </ul>
       </div>

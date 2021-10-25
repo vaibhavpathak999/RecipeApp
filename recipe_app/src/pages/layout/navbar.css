@@ -1,5 +1,5 @@
  .navbar-title{
-    color: #F89A99;
+    color: white;
     margin:"0px 0px 0px 67.547px";
     font-size: 20px;
 }
@@ -9,7 +9,7 @@
 }
   
 .dropdown-text:hover{
-    color: #2E357E;
+    color: white;
 }
 
 .dropdown {
@@ -28,7 +28,7 @@
   
 
 .dropdown-menu a {
-    color: black;
+    color: white;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -51,7 +51,7 @@
 
 @media (max-width: 850px) {
     .navbar-brand{
-        color: #F89A99;
+        color: white;
         margin-left: 15px;
     }
     .nav-item{
@@ -63,14 +63,37 @@ li a{
     text-decoration: none;
 }
 
-nav ul a{
-    font-size: 16px;
-}
 
 nav ul a:hover{
-    color: #FEC947;
+    color: #E0DCD0;
+}
+
+nav ul a {
+    -webkit-transition: background-color .3s;
+    transition: background-color .3s;
+    font-size: 1.2rem;
+    color: #fff;
+    display: block;
+    padding: 0 15px;
+    cursor: pointer;
 }
 nav a{
     margin: 0px auto;
 }
 
+.navbar-ul {
+    text-decoration: "none";
+    font-size: "17px";
+    color: white;
+}
+
+.navbar-title {
+    text-decoration: none;
+    font-size: 2rem;
+}
+.logo {
+    max-width: 35px !important;
+    max-height: 35px !important;
+    display: inline;
+    z-index: 5;
+}

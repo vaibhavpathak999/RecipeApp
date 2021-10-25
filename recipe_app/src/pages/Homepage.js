@@ -11,9 +11,8 @@ export default class Home extends Component {
         <div className="home-container">
           <div className="row align-items-center">
             <div className="text-content col-sm-12 col-md-6">
-              <h1><span style={{ color: "#F89A99" }}>MyRecipe Diary</span><br /> is your new digital recipe diary.</h1>
-              <h4 style={{ color: "#595959" }}>Never loose your recipe again.</h4>
-              <h4 style={{ color: "#595959" }}>Share you recipe with all your family</h4>
+              <h1><span style={{ color: "#F46E45", fontSize: "5rem" }}>MyRecipe Diary</span><br /> is your new digital recipe diary.</h1>
+              <h4 style={{ color: "#595959", fontSize: "2rem"  }}>Never loose your recipe again.</h4>
             </div>
 
             <div className="image-content col-sm-12 col-md-6">

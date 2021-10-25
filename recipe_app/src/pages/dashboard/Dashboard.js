@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from 'react'
 import { UserContext } from '../../App'
 import { Link } from 'react-router-dom'
 import 'font-awesome/css/font-awesome.min.css';
-// import Profile from './Profile';
 import "./../css/dashboard.css"
 
 const Dashboard = () => {
@@ -47,7 +46,6 @@ const Dashboard = () => {
     }
     return (
         <div>
-            {/* <Profile /> */}
             <div className="home container" style={{padding:"0.5% 10%", margin:"0px", display:"flex", flexDirection:"row",flexWrap:"wrap"}} >
                 {
 

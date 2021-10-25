@@ -11,7 +11,6 @@ const AddRecipe = () => {
     var [recipe_ingredients, setRecipeIngredients] = useState([""])
     var [recipe_instructions, setRecipeInstructions] = useState([""])
     const [image, setImage] = useState("")
-    const [picture, setPicture] = useState("");
     const [url, setUrl] = useState("")
     useEffect(() => {
         if (url) {
@@ -90,18 +89,6 @@ const AddRecipe = () => {
         values.splice(index, 1);
         setRecipeInstructions(values);
         console.log(values)
-    }
-
-    function addIngrdient(index) {
-        const values = [...recipe_ingredients];
-        values.push("");
-        setRecipeIngredients(values);
-    }
-
-    function addInstructions(index) {
-        const values = [...recipe_instructions];
-        values.push("");
-        setRecipeInstructions(values);
     }
 
 
