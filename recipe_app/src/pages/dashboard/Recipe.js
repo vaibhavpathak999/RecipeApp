@@ -68,13 +68,17 @@ const AddRecipe = () => {
         padding: "20px",
         textAlign: "center",
         width: "500px"
+
     }
 
     const inputStyle = {
-        margin: "10px auto 15px",
-        maxWidth: "500px",
-        padding: "20px",
-        textAlign: "center"
+        margin: "10px 20px 25px",
+        maxWidth: "450px",
+        padding: "30px",
+        textAlign: "center",
+        borderRadius : "20px",
+        background: "#e0e0e0",
+        boxShadow:  "5px 5px 10px #bebebe,-5px -5px 10px #ffffff",
     }
 
     function deleteIngredient(index) {
@@ -93,30 +97,34 @@ const AddRecipe = () => {
 
 
     return (
-        <div className="conatiner-fluid"  style={{ padding: "1% 15% 0% 15%" }}>
-            <h3 style={{ textAlign: "center", color: "#2E357E", marginTop: "50px", fontSize: "40px" }}>Add new recipe</h3>
+        <div className="conatiner-fluid"  style={{ padding: "1% 15% 0% 15%", backgroundColor:"#E0E0E0" }}>
+            <div style={{ textAlign: "center", color: "#2E357E", padding:"20px", fontSize: "4rem" }}>
+            <h3 >Add new recipe</h3>
+            </div>
             <div style={{ display: "flex" }}>
                 <div>
                     <VisualizerCard title={recipe_title} ingredients={recipe_ingredients} instructions={recipe_instructions} />
                 </div>
-
+                
                 <div className="card input-filed" style={cardInputFeildStyle}>
-
+                <label for="RecipeTitle" style={{margin:"20px auto 0px auto"}} className="labelClass">Recipe Title</label>
                     <input
                         type="text"
+                        id="RecipeTitle"
                         placeholder="Recipe Title"
                         value={recipe_title}
                         onChange={(e) => setRecipeTitle(e.target.value)}
+                        style={{padding:"", maxWidth:"400px", margin:"auto auto 20px auto"}}
                     />
 
                     <label for="ingredients" className="labelClass">Ingredients</label>
                     {/* ingredients new input */}
-                    <div className="card" id="ingredients" style={inputStyle}>
+                    <div id="ingredients" style={inputStyle}>
                         {recipe_ingredients.map((ingredient, index) => {
                             return <Card ingred={ingredient} index={index} setRecipeIngredients={setRecipeIngredients} propName={"Enter Ingredient"} />
                         })}
                         <div>
-                            <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px" }} onClick={() => deleteIngredient(recipe_ingredients.length - 1)} > Delete </button>
+                            <button className="btn btn-danger waves-effect waves-light " style={{ margin: "0px 0px 0px 10px" }} onClick={() => deleteIngredient(recipe_ingredients.length - 1)} > Delete </button>
                         </div>
                     </div>
 
@@ -125,12 +133,12 @@ const AddRecipe = () => {
                     {/* ingredients new input */}
 
                     <label for="Instructions" className="labelClass">Instructions</label>
-                    <div className="card" id="Instructions" style={inputStyle}>
+                    <div id="Instructions" style={inputStyle}>
                         {recipe_instructions.map((instruction, index) => {
                             return <Card ingred={instruction} index={index} setRecipeIngredients={setRecipeInstructions} propName={"Enter Instruction"} />
                         })}
                         <div>
-                            <button className="btn btn-warning waves-effect waves-light #ef5350 red lighten-1" style={{ margin: "0px 0px 0px 10px", padding: "0px auto" }} onClick={() => deleteInstruction(recipe_instructions.length - 1)} > Delete </button>
+                            <button className="btn btn-danger waves-effect waves-light" style={{ margin: "0px 0px 0px 10px", padding: "0px auto" }} onClick={() => deleteInstruction(recipe_instructions.length - 1)} > Delete </button>
                         </div>
                     </div>
 

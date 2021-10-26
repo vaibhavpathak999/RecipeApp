@@ -85,8 +85,8 @@ const Dashboard = () => {
                                             </div>
                                             
                                             <div className="button mt-2 d-flex flex-row align-items-center" style={{ margin: "45px auto auto 0px", padding:"10px 0px" }} >
-                                                <button className="btn btn-warning" onClick={() => deleteContact(item._id)} style={{width:"90%", margin:"5px 15px"}}> Delete</button>
-                                                <button className="btn btn-primary" style={{ margin: "5px 15px",width:"90%" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none" }}></Link>Update </button>
+                                                <button className="btn btn-warning" onClick={() => deleteContact(item._id)} style={{width:"90%", margin:"5px 15px"}}><Link to="/myrecipes" style={{ textDecoration: "none", color:"black" }}>Delete</Link> </button>
+                                                <button className="btn btn-primary" style={{ margin: "5px 15px",width:"90%" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none", color:"white" }}>Update</Link> </button>
                                             </div>
                                         </div>
                                     </div>

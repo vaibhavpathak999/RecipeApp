@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import "../css/dashboard.css";
+
 
 function Card({ ingred, index, setRecipeIngredients, propName }) {
     const [ingredient, setIngredient] = useState("");
@@ -20,7 +22,7 @@ function Card({ ingred, index, setRecipeIngredients, propName }) {
     }
 
     return (
-        <div style={{ display: "flex", flexDirection:"row", margin:"10px !important" }} key={`${ingred}-${index}`}>
+        <div style={{display:"flex"}} key={`${ingred}-${index}`}>
             <div>
                 <input type="text" placeholder={propName}
                     onChange={(e) =>
@@ -33,7 +35,7 @@ function Card({ ingred, index, setRecipeIngredients, propName }) {
                  />
             </div>
             <div> 
-            <button className="btn btn-warning waves-effect waves-light #66bb6a green lighten-1" style={{ margin: "0px 0px 20px 30px" }} disabled={disable} onClick={() => handleClick() } > Add  </button> 
+                <button className="btn btn-primary waves-effect waves-light" style={{ margin: "10px 0px 10px 15px" }} disabled={disable} onClick={() => handleClick() } > Add  </button> 
             </div>
         </div>
     )
