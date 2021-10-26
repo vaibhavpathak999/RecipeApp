@@ -71,7 +71,8 @@ const Edit = () => {
         maxWidth: "500px",
         padding: "20px",
         textAlign: "center",
-        width:"500px" 
+        width:"500px",
+        backgroundColor:"#E9E9E9"
     }
 
     const inputStyle = {

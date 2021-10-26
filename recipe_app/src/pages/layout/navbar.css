@@ -91,9 +91,3 @@ nav a{
     text-decoration: none;
     font-size: 2rem;
 }
-.logo {
-    max-width: 35px !important;
-    max-height: 35px !important;
-    display: inline;
-    z-index: 5;
-}

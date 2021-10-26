@@ -1,8 +1,13 @@
 .card {
-    width: 400px;
+    width: 500px;
     border: none;
-    border-radius: 10px;
-    background-color: #fff
+    /* border-radius: 10px; */
+    /* background-color: #fff; */
+    margin: 10px 30px;
+    border-radius: 50px;
+    background: #e0e0e0;
+    box-shadow:  20px 20px 60px #bebebe,
+             -20px -20px 60px #ffffff;
 }
 
 .stats {
@@ -38,30 +43,33 @@
 }
 
 .ingredients {
-    margin:5px 20px 20px 0px;
+    margin:4px 5px;
     color: white;
     text-align: center;
-    height: 45px;
+    height: 35px;
     width: auto;
-    background-color: #212121;
-    border-radius: 5%;
+    background-color: #484848;
+    border-radius: 20px;
     display: inline-block;
-    padding: 2.5%;
+    padding: 1.5%;
 }
 .ingredients:hover {
-    background-color: #ffea00;
-    color: black;
+    background-color: #7986cb ;
+    color: white;
 }
 
 .instructions {
-    margin: 5px;
+    margin: 5px 0px;
+    font-size: 20px;
+    color: #2C2C2C;
 }
 .recipeImage {
-    max-width: 450px;
+    max-width: 500px;
     max-height: 300px;
+    border-radius: 50px 50px 0 0;
     width: auto;
-    height: auto;
-    margin: 10px auto;
+    height: 300px;
+    margin: 0px;
 }
 
 .labelClass {

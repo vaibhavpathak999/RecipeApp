@@ -140,3 +140,7 @@ background: -webkit-linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC);  /* Ch
 background: linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
+
+.features-heading {
+  font-size: 3rem;
+}

@@ -45,20 +45,20 @@ const Dashboard = () => {
             })
     }
     return (
-        <div>
-            <div className="home container" style={{padding:"0.5% 10%", margin:"0px", display:"flex", flexDirection:"row",flexWrap:"wrap"}} >
+        <div style={{backgroundColor:"#e0e0e0"}}>
+            <div className="home container" style={{padding:"0.5% 5%", margin:"0px", display:"flex", flexDirection:"row", flex:"1 1 auto"}} >
                 {
 
                     data.map((item,index) => {
                         return (
                             <div key={index + data.title} className="container mt-5 d-flex justify-content-center" >
-                                <div className="card p-3" style={{ width: 500 }}>
+                                <div className="card recipe-cards p-3">
                                 <img className="recipeImage" src={item.photo} /> 
                                     <div className="d-flex align-items-center" style={{ padding: "2%" }}>
                                         
                                         <div className="ml-3 w-100">
-                                            <h3 className="mb-0 mt-0" style={{ marginTop: "0px" }}>{item.title}</h3>
-                                            <h5 className="" style={{ marginTop: "15px" }}>Ingredients</h5>
+                                            <h3 className="mb-0 mt-0" style={{ margin: "40px 0px 40px 0px" }}>{item.title}</h3>
+                                            <h5 className="" style={{ padding: "25px 0px 0px 0px", color:"#4D4D4D" }}>Ingredients</h5>
                                             <div className="">
                                             {
                                                 
@@ -71,8 +71,8 @@ const Dashboard = () => {
                                             }
                                             </div>
 
-                                            <h5 className="" style={{ marginTop: "15px" }}>Instructions</h5>
-                                            <div className="">
+                                            <h5 className="" style={{ marginTop: "25px", color:"#4D4D4D" }}>Instructions</h5>
+                                            <div className="" >
                                             {
                                                 
                                                 item.steps.map((instruction,index) =>{
@@ -84,9 +84,9 @@ const Dashboard = () => {
                                             }
                                             </div>
                                             
-                                            <div className="button mt-2 d-flex flex-row align-items-center" style={{ marginLeft: "25px" }} >
-                                                <button className="btn btn-danger" onClick={() => deleteContact(item._id)}><i className="fa fa-trash fa-2x"></i></button>
-                                                <button className="btn btn-success" style={{ marginLeft: "15px" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none" }}><i className="fa fa-pencil fa-2x" style={{ color: "white" }}></i></Link> </button>
+                                            <div className="button mt-2 d-flex flex-row align-items-center" style={{ margin: "45px auto auto 0px", padding:"10px 0px" }} >
+                                                <button className="btn btn-warning" onClick={() => deleteContact(item._id)} style={{width:"90%", margin:"5px 15px"}}> Delete</button>
+                                                <button className="btn btn-primary" style={{ margin: "5px 15px",width:"90%" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none" }}></Link>Update </button>
                                             </div>
                                         </div>
                                     </div>
