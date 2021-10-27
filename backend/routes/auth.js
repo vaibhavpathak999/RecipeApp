@@ -8,8 +8,11 @@ const jwt = require('jsonwebtoken')
 // const userLogin = require('../middleware/userLogin')
 const nodemailer = require('nodemailer')
 const sendgridTransport = require('nodemailer-sendgrid-transport')
+const sgMail = require('@sendgrid/mail')
+sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 const {EMAIL, JWT_SECRET, SENDGRID_API} = require("../config/dev");
+const mail = require('@sendgrid/mail')
 
 const transporter = nodemailer.createTransport(sendgridTransport({
     auth:{
@@ -38,6 +41,21 @@ router.post('/signup',(req,res)=>{
     
             user.save()
             .then(user=>{
+                const msg = {
+                    to: mail, // Change to your recipient
+                    from: EMAIL, // Change to your verified sender
+                    subject: 'Welcome to MyRecipe Diary',
+                    text: 'You are successfully registered on the MyRecipe Diary Platform',
+                    html: '<strong>Thanks a lot for joining the worldwide recipe sharing community</strong>',
+                  }
+                sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
                 res.json({message:"saved successfully"})
             })
             .catch(err=>{
@@ -68,6 +86,8 @@ router.post('/signin',(req,res)=>{
                 // res.json({message:"successfully signed in"})
                const token = jwt.sign({_id:savedUser._id},JWT_SECRET)
                const {_id,name,email,followers,following} = savedUser
+               
+
                res.json({token,user:{_id,name,email,followers,following}})
             }
             else{
@@ -82,12 +102,13 @@ router.post('/signin',(req,res)=>{
 
 
 router.post('/reset-password',(req,res)=>{
+    const {email} = req.body;
      crypto.randomBytes(32,(err,buffer)=>{
          if(err){
              console.log(err)
          }
          const token = buffer.toString("hex")
-         User.findOne({email:req.body.email})
+         User.findOne({email})
          .then(user=>{
              if(!user){
                  return res.status(422).json({error:"User dont exists with that email"})
@@ -95,15 +116,24 @@ router.post('/reset-password',(req,res)=>{
              user.resetToken = token
              user.expireToken = Date.now() + 3600000
              user.save().then((result)=>{
-                 transporter.sendMail({
-                     to:user.email,
+                 const msg = {
+                     to:email,
                      from:EMAIL,
                      subject:"password reset",
+                     text:"Welcome again to MyRecipe Diary. We know you are facing problem in accessing your account.",
                      html:`
                      <p>You requested for password reset</p>
-                     <h5>click in this <a href="${EMAIL}/reset/${token}">link</a> to reset password</h5>
+                     <h5>click in this <a href="http://localhost:3000/reset/${token}">link</a> to reset password</h5>
                      `
-                 })
+                 }
+                 sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
                  res.json({message:"check your email"})
              })
 

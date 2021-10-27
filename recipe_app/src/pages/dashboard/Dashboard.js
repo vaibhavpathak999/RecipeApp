@@ -46,7 +46,7 @@ const Dashboard = () => {
     }
     return (
         <div style={{backgroundColor:"#e0e0e0"}}>
-            <div className="home container" style={{padding:"0.5% 5%", margin:"0px", display:"flex", flexDirection:"row", flex:"1 1 auto"}} >
+            <div className="home container" style={{padding:"4%", marginBottom:"0px", display:"flex", flexDirection:"row", flex:"1 1 auto"}} >
                 {
 
                     data.map((item,index) => {

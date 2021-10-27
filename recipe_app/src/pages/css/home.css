@@ -5,13 +5,11 @@ a{
 }
 
 .brand-logo,h2{
-
   font-family: 'Grand Hotel', cursive;
-  
 }
 
 .auth-card{
-  padding: 7%;
+  padding: 2.5%;
   text-align: center;
   max-width: 400px;
   margin: 10px auto;
@@ -35,10 +33,7 @@ a{
 .item{
   width: 30%;
 }
-/* 
-.home {
-  background-color: #;
-} */
+
 
 .home-card{
   max-width: 500px;
@@ -64,33 +59,17 @@ a{
 
 /* Login-page */
 .mycard{
-    margin: 5% 10%;
+    margin: 5% auto;
     align-items: center;
-    float: right;
     width: 40%;
 }
 
-.login-image{
-  width: 35%;
-  height: 35%;
-  float: left;
-  margin-left: 2%;
-}
 
 .links-text{
   text-decoration: none;
 }
 
 
-/* Signup page */
-.signup-image{
-  width: 25%;
-    height: 25%;
-    float: right;
-    margin-top: 3%;
-    margin-right: 13%;
-
-}
 
 @media (max-width: 600px) {
 
@@ -107,31 +86,12 @@ a{
       float: none;
   }
 
-  .signup-image{
-    display: none;
-}
 
   .editContact-form{
     width: 95%;
     margin: 2%;
   }
 
-  .signup-section{
-    margin-top: 12%;
-  }
-
-}
-
-/* Reset password */
-.mycardreset{
-  margin: 130px auto;
-  align-items: center;
-  width: 100%;
-}
-
-.resetPasswordCard{
-  width: 300px;
-  padding: 3%;
 }
 
 .main-page {

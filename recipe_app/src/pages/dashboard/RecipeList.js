@@ -2,7 +2,7 @@ import React from "react";
 
 export default function List({ recipes }) {
     return (
-        <div>
+        <div >
                 {
                     recipes.map((item, index) => {
                         return (

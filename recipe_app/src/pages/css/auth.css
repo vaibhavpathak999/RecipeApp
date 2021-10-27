@@ -1,0 +1,63 @@
+.login-screen {
+    width: 100%;
+    height: 100%;
+    background: #E1DDD0;
+    background: -webkit-linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    align-items: center;
+}
+
+.login-image {
+    width: 90%;
+    height: 90%;
+    margin: 3.5% 150px auto 100px;
+}
+
+.mycardreset {
+    height: 100vh;
+    width: 100vw;
+    background: #E1DDD0;
+    background: -webkit-linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
+/* Signup page */
+.signup-image{
+    width: 90%;
+    height: 90%;
+    margin: 3.5% auto auto 100px;
+  }
+
+  .newPassword {
+    
+  }
+
+@media (max-width: 600px) {
+
+  .login-screen {
+    width: 100%;
+    height: 100%;
+    background: #E1DDD0;
+    background: -webkit-linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #C6BDAC, #E3DFD3, #D5CEBC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-image {
+    width: 90%;
+    height: 90%;
+    margin: auto;
+}
+
+.signup-image{
+    width: 90%;
+    height: 90%;
+    margin: 0px 35px 0px 0px;
+  }
+
+}
+  

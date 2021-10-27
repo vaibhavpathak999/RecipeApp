@@ -1,6 +1,8 @@
 import React, { useState, useContext, } from 'react'
 import { Link, useHistory, useParams } from 'react-router-dom'
 import M from 'materialize-css'
+import "../css/auth.css";
+
 const SignIn = () => {
     const history = useHistory()
     const [password, setPasword] = useState("")
@@ -32,9 +34,10 @@ const SignIn = () => {
             })
     }
     return (
-        <div className="mycard">
-            <div className="card auth-card input-field">
-                <h2>Instagram</h2>
+        <div className="newPassword" >
+        <div className="mycardreset" style={{padding:"10%"}} >
+            <div className="auth-card">
+                <h2>MyRecipe Diary</h2>
 
                 <input
                     type="password"
@@ -49,6 +52,7 @@ const SignIn = () => {
                 </button>
 
             </div>
+        </div>
         </div>
     )
 }

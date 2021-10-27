@@ -67,8 +67,7 @@ const AddRecipe = () => {
         maxWidth: "500px",
         padding: "20px",
         textAlign: "center",
-        width: "500px"
-
+        width: "500px",
     }
 
     const inputStyle = {
@@ -153,7 +152,7 @@ const AddRecipe = () => {
                             <input className="file-path validate" type="text" />
                         </div>
                     </div>
-                    <button className="btn btn-primary waves-effect waves-light #64b5f6  darken-1"
+                    <button style={{margin:"20px 0px"}} className="btn btn-primary waves-effect waves-light #64b5f6  darken-1"
                         onClick={() => postDetails()}
 
                     >
@@ -168,4 +167,4 @@ const AddRecipe = () => {
 }
 
 
-export default AddRecipe
+export default AddRecipe;

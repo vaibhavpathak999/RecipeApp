@@ -11,6 +11,7 @@ import NewPassword from "./pages/auth/NewPassword";
 
 //layout pages
 import NavBar from './pages/layout/Navbar';
+import Footer from './pages/layout/Footer';
 import Home from "./../src/pages/Homepage";
 import AddRecipe from './pages/dashboard/Recipe';
 import Dashboard from './pages/dashboard/Dashboard';
@@ -67,6 +68,7 @@ function App() {
       <BrowserRouter>
         <NavBar />
         <Routing />
+        <Footer />
       </BrowserRouter>
     </UserContext.Provider>
   );

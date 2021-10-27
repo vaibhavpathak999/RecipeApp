@@ -1,6 +1,8 @@
 import React, { useState, useContext, } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import M from 'materialize-css'
+import "../css/auth.css";
+
 const Reset = () => {
     const history = useHistory()
     const [email, setEmail] = useState("")
@@ -15,7 +17,7 @@ const Reset = () => {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify({
-                email
+                email:email
             })
         }).then(res => res.json())
             .then(data => {
@@ -32,7 +34,8 @@ const Reset = () => {
     }
     return (
         <div className="mycardreset">
-            <div className="card auth-card input-field resetPasswordCard">
+            <div style={{padding:"10%"}}>
+            <div className="auth-card">
                 <h2>MyRecipe Diary</h2>
                 <input
                     type="text"
@@ -45,8 +48,7 @@ const Reset = () => {
                 >
                     <span style={{ color: "#fff" }}>reset password</span>
                 </button>
-
-
+            </div>
             </div>
         </div>
     )

@@ -11,19 +11,13 @@ a{
 }
 
 .auth-card{
-  padding: 7%;
+  padding: 2.5%;
   text-align: center;
-  max-width: 400px;
-  margin: 10px auto;
-}
-
-.input-field input[type=text]:focus {
-  border-bottom: 1px solid #F89A99 !important;
-  box-shadow: 0 1px 0 0 #F89A99  !important;
-}
-.input-field input[type=password]:focus {
-  border-bottom: 1px solid #F89A99 !important;
-  box-shadow: 0 1px 0 0 #F89A99 !important;
+  max-width: 550px;
+  border-radius: 30px;
+  background: #E1DDD0;
+  box-shadow:  20px 20px 60px #bfbcb1,
+             -20px -20px 60px #fffeef;
 }
 
 .gallery{
@@ -103,26 +97,11 @@ a{
       float: none;
   }
 
-  .signup-image{
-    display: none;
-}
-
   .editContact-form{
     width: 95%;
     margin: 2%;
   }
 
-  .signup-section{
-    margin-top: 12%;
-  }
-
-}
-
-/* Reset password */
-.mycardreset{
-  margin: 130px auto;
-  align-items: center;
-  width: 100%;
 }
 
 .resetPasswordCard{

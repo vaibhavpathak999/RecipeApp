@@ -2,7 +2,8 @@ import React, { useState, useContext, } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { UserContext } from '../../App'
 import M from 'materialize-css'
-import loginImage from "./../../images/3.png"
+import loginImage from "./../../images/3.png";
+import "../css/auth.css";
 
 const SignIn = () => {
     const { state, dispatch } = useContext(UserContext)
@@ -41,25 +42,27 @@ const SignIn = () => {
             })
     }
     return (
-        <div>
+        <div className="login-screen">
             <div>
                 <img src={loginImage} className="login-image"></img>
             </div>
             <div className="mycard">
-                <div className="card auth-card input-field">
-                    <h2 style={{ fontFamily: "sans-serif" }}>MyRecipe Diary</h2>
+                <div className="auth-card input-field">
+                    <h2 style={{ fontFamily: "sans-serif", margin:"30px auto" }}>MyRecipe Diary</h2>
                     <input
                         type="text"
                         placeholder="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
                     />
+                    
                     <input
                         type="password"
                         placeholder="password"
                         value={password}
                         onChange={(e) => setPasword(e.target.value)}
                     />
+
                     <button className="btn btn-success waves-effect waves-light #64b5f6 darken-1"
                         onClick={() => PostData()}
                         style={{ margin: "20px auto", width: "100%" }}
