@@ -25,10 +25,16 @@ router.post('/addrecipe',userLogin,(req,res)=>{
     })
 })
 
-router.get('/:id', (req, res)=> {
+router.get('/recipes/:id', (req, res)=> {
     let id = req.params.id;
     Recipe.findById(id, function(err, recipe) {
-        res.json(recipe);
+        if(recipe) {
+            recipe.postedBy = null;
+            return  res.status(200).json({recipeDetails:recipe})
+        }
+        else {
+            return  res.status(422).json({error:"Recipe Not Found"})
+        }
     });
 });
 

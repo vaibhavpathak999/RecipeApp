@@ -7,7 +7,7 @@ export default function List({ recipes }) {
                     recipes.map((item, index) => {
                         return (
                             <div key={index + data.title} className="container mt-5 d-flex justify-content-center" >
-                                <div className="card p-3" style={{ width: 500 }}>
+                                <div className="card p-3" style={{ maxWidth: 500 }}>
                                     <img className="recipeImage" src={item.photo} />
                                     <div className="d-flex align-items-center" style={{ padding: "2%" }}>
 

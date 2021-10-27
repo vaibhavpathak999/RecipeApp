@@ -1,0 +1,21 @@
+.featureCard {
+    border: none;
+    margin: 10px 30px;
+    border-radius: 50px;
+    background: #ffffff;
+    box-shadow:  20px 20px 60px #d9d9d9,
+             -20px -20px 60px #ffffff;
+    max-width: 350px;
+    padding: 25px;
+}
+
+.card-image img{
+    max-width: 320px;
+    border-radius: 50px 50px 0 0;
+}
+
+.card-image span {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight: bold;
+}

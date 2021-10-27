@@ -1,85 +1,50 @@
 import React from 'react';
-import firstImage from "../../images/1.png";
+import firstImage from "../../images/2.png";
+import "../css/feature.css";
 
 function Features() {
     return (
         <div className="container-fluid main-page-features" style={{ padding: "1% 15% 0% 10%", margin: "7% 0%" }}>
             <div style={{ backgroundColor: "#fff" }}>
-                <h1 className="features-heading">Features</h1>
+                <h1 className="features-heading" style={{padding:"0px 30px 50px auto"}}>Features</h1>
                 <div className="container">
-                    <div class="row">
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-image">
+                    <div className="row">
+                        <div className="col s12 m7">
+                            <div className="featureCard">
+                                <div className="card-image">
                                     <img src={firstImage}></img>
-                                    <span class ="card-title">Card Title</span>
+                                    <span className ="card-title">Live Recipe Visualization</span>
                                 </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
+                                <div className="card-content">
+                                    <p>So that you can focus on writing your recipes not memozing them.</p>
                                 </div>
                             </div>
                         </div>
 
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-image">
+                        <div className="col s12 m7">
+                            <div className="featureCard">
+                                <div className="card-image">
                                     <img src={firstImage}></img>
-                                    <span class ="card-title" style={{color:"black"}}>Interactive UI/UX</span>
+                                    <span className ="card-title" style={{color:"black"}}>Interactive UI/UX</span>
                                 </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
+                                <div className="card-content">
+                                    <p>Easy to use User Centered desing for app. You will fall in love the design.</p>
                                 </div>
                             </div>
                         </div>
                         
-                        <div class="col s12 m7">
-                            <div class="card">
-                                <div class="card-image">
+                        <div className="col s12 m7">
+                            <div className="featureCard">
+                                <div className="card-image">
                                     <img src={firstImage}></img>
-                                    <span class ="card-title">Card Title</span>
+                                    <span className ="card-title">Recipe Share Option</span>
                                 </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                        I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
+                                <div className="card-content">
+                                    <p>You can easily share your amazing recipe to your frinds and family.</p>
                                 </div>
                             </div>
                         </div>
                     </div>
-
-                    {/* <div className="col-sm-4">
-                        <div className="text-center features-item">
-                            <div className="col-wrapper">
-                                <div className="icon-border">
-                                    <i class="fa fa-paint-brush fa-3x color-l-blue"></i>
-                                </div>
-                                <h5>Interactive UI/UX</h5>
-                                <p>A simple and easy to use application according to the interests of the users.</p>
-                            </div>
-                        </div>
-                    </div> */}
-
-                    {/* <div className="col-sm-4">
-                        <div className="text-center features-item">
-                            <div className="col-wrapper">
-                                <div className="icon-border">
-                                    <i class="fa fa-trash fa-3x color-l-yellow"></i>
-                                </div>
-                                <h5>Update & Delete</h5>
-                                <p>The user can update or delete any contact he/she wishes to.</p>
-                            </div>
-                        </div>
-                    </div> */}
                 </div>
 
             </div>

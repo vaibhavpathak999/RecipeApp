@@ -4,10 +4,14 @@ import { Link } from 'react-router-dom'
 import 'font-awesome/css/font-awesome.min.css';
 import "./../css/dashboard.css"
 
+import FadeLoader from "react-spinners/FadeLoader";
+import override from './utility';
+
 const Dashboard = () => {
 
     const [data, setData] = useState([])
     const { state, dispatch } = useContext(UserContext)
+    let [color, setColor] = useState("#F46E45");
     useEffect(() => {
         fetch('/myrecipes', {
             method: 'POST',
@@ -25,7 +29,7 @@ const Dashboard = () => {
             })
     }, [])
 
-    const deleteContact = (postid) => {
+    const deleteRecipe = (postid) => {
         // console.log(postid)
         fetch(`/deleterecipe/${postid}`, {
             method: 'DELETE',
@@ -48,8 +52,7 @@ const Dashboard = () => {
         <div style={{backgroundColor:"#e0e0e0"}}>
             <div className="home container" style={{padding:"4%", marginBottom:"0px", display:"flex", flexDirection:"row", flex:"1 1 auto"}} >
                 {
-
-                    data.map((item,index) => {
+                    data === [] ? <FadeLoader color={color} css={override} size={150} /> : data.map((item,index) => {
                         return (
                             <div key={index + data.title} className="container mt-5 d-flex justify-content-center" >
                                 <div className="card recipe-cards p-3">
@@ -85,8 +88,10 @@ const Dashboard = () => {
                                             </div>
                                             
                                             <div className="button mt-2 d-flex flex-row align-items-center" style={{ margin: "45px auto auto 0px", padding:"10px 0px" }} >
-                                                <button className="btn btn-warning" onClick={() => deleteContact(item._id)} style={{width:"90%", margin:"5px 15px"}}><Link to="/myrecipes" style={{ textDecoration: "none", color:"black" }}>Delete</Link> </button>
+                                                <button className="btn btn-success" style={{ margin: "5px 15px",width:"90%" }}><Link to={"/recipes/" + item._id} style={{ textDecoration: "none", color:"white" }}>Share</Link> </button>
                                                 <button className="btn btn-primary" style={{ margin: "5px 15px",width:"90%" }}><Link to={"/updaterecipe/" + item._id} style={{ textDecoration: "none", color:"white" }}>Update</Link> </button>
+                                                <button className="btn btn-danger" onClick={() => deleteRecipe(item._id)} style={{width:"90%", margin:"5px 15px"}}><Link to="/myrecipes" style={{ textDecoration: "none", color:"black" }}>Delete</Link> </button>
+
                                             </div>
                                         </div>
                                     </div>
@@ -97,8 +102,6 @@ const Dashboard = () => {
                         )
                     })
                 }
-
-
 
             </div>
         </div>

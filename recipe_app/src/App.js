@@ -16,6 +16,7 @@ import Home from "./../src/pages/Homepage";
 import AddRecipe from './pages/dashboard/Recipe';
 import Dashboard from './pages/dashboard/Dashboard';
 import Edit from './pages/dashboard/EditRecipe';
+import ShareRecipe from './pages/dashboard/ShareRecipe';
 
 export const UserContext = createContext()
 
@@ -56,6 +57,9 @@ const Routing = () => {
 
       {/* update the recipe */}
       <Route path="/updaterecipe/:postid"><Edit /></Route>
+
+      {/* share with friends page */}
+      <Route path="/recipes/:postid"><ShareRecipe /></Route>
 
     </Switch>
   )
