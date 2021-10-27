@@ -6,7 +6,7 @@
     box-shadow:  20px 20px 60px #d9d9d9,
              -20px -20px 60px #ffffff;
     max-width: 350px;
-    padding: 25px;
+    padding: 15px;
 }
 
 .card-image img{
@@ -18,4 +18,6 @@
     font-family: 'Courier New', Courier, monospace;
     font-size: medium;
     font-weight: bold;
+    /* margin: 150px auto; */
+    padding: 120px;
 }

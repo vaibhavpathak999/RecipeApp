@@ -1,7 +1,7 @@
 import React, { useContext, useRef, useEffect, useState } from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { UserContext } from '../../App';
-import "./navbar.css"
+import "../css/navbar.css";
 // import logo from "../../images/recipeLogo.png";
 
 const NavBar = () => {

@@ -1,5 +1,7 @@
 import React from 'react';
-import firstImage from "../../images/2.png";
+import firstImage from "../../images/Visual Tool.png";
+import secondImage from "../../images/Share.png";
+import thirdImage from "../../images/recipes.png";
 import "../css/feature.css";
 
 function Features() {
@@ -13,10 +15,12 @@ function Features() {
                             <div className="featureCard">
                                 <div className="card-image">
                                     <img src={firstImage}></img>
-                                    <span className ="card-title">Live Recipe Visualization</span>
+                                    <span className ="card-title" style={{padding:"90px"}}>Visualization</span>
                                 </div>
                                 <div className="card-content">
-                                    <p>So that you can focus on writing your recipes not memozing them.</p>
+                                    <p><b>So that you can focus on writing your recipes not memozing them.</b></p>
+                                    <p>One card is for filling the details for the recipe.</p>
+                                    <p>Second card is for seeing all the changes live.</p>
                                 </div>
                             </div>
                         </div>
@@ -24,11 +28,13 @@ function Features() {
                         <div className="col s12 m7">
                             <div className="featureCard">
                                 <div className="card-image">
-                                    <img src={firstImage}></img>
-                                    <span className ="card-title" style={{color:"black"}}>Interactive UI/UX</span>
+                                    <img src={thirdImage}></img>
+                                    <span className ="card-title" style={{color:"black"}}>UI/UX</span>
                                 </div>
                                 <div className="card-content">
-                                    <p>Easy to use User Centered desing for app. You will fall in love the design.</p>
+                                    <p><b>Easy to use User Centered desing for app.</b></p>
+                                    <p> This web uses simple form filling for creating, updating the recipes.</p>
+                                    <p> You will fall in love the design.</p>
                                 </div>
                             </div>
                         </div>
@@ -36,11 +42,14 @@ function Features() {
                         <div className="col s12 m7">
                             <div className="featureCard">
                                 <div className="card-image">
-                                    <img src={firstImage}></img>
-                                    <span className ="card-title">Recipe Share Option</span>
+                                    <img src={secondImage}></img>
+                                    <span className ="card-title">Options</span>
                                 </div>
                                 <div className="card-content">
-                                    <p>You can easily share your amazing recipe to your frinds and family.</p>
+                                    <p><b>You can easily share your amazing recipe to your frinds and family.</b></p>
+                                    <p> User can share recipes.</p>
+                                    <p> User can update recipes.</p>
+                                    <p> User can delete recipes.</p>
                                 </div>
                             </div>
                         </div>
