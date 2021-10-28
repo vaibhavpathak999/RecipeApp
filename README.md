@@ -2,7 +2,7 @@
 MyRecipe Diary App allows user to create, update, share and delete recipes. It is an easy to use minimalistic recipe creating app providing wonderful user experience.
 <br>
 - Link to App :-
-https://recipechallengeapp.herokuapp.com/
+https://recipechallengeapp.herokuapp.com
 
 ## You will fall in love with creating recipes 😍
 <b>- What did I learn? </b>
