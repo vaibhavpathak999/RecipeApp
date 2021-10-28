@@ -54,22 +54,22 @@ Install dependencies
 
 ## Gallery
 - ### Home page
-<p align="center"><img src="GalleryPhotos/snap1.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap1.png" width = 80%></p><br>
 
 - ### Features
-<p align="center"><img src="GalleryPhotos/snap2.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap2.png" width = 80%></p><br>
 
 - ### Add Recipe Card
-<p align="center"><img src="GalleryPhotos/snap3.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap3.png" width = 80%></p><br>
 
 - ### Live changes in Recipe Card
-<p align="center"><img src="GalleryPhotos/snap4.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap4.png" width = 80%></p><br>
 
 - ### My recipes page
-<p align="center"><img src="GalleryPhotos/snap5.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap5.png" width = 80%></p><br>
 
 - ### Features page
-<p align="center"><img src="GalleryPhotos/snap6.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap6.png" width = 80%></p><br>
 
 - ### Shared Recipe Page
-<p align="center"><img src="GalleryPhotos/snap7.png" width = 80%></p><br>
+<p align="center"><img src="./GalleryPhotos/snap7.png" width = 80%></p><br>
