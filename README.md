@@ -9,7 +9,7 @@ https://recipechallengeapp.herokuapp.com/
 <br>
 I polished my full stack skills, learned about UX/UI and implementing them. I also get to know about basic state management, REST APIs, fetching APIs, Authenticating using JWT.
 
-## Features:
+## Features
 - Users can <b>Create</b> Recipe
 - Users can <b>Update</b> Recipe
 - Users can <b>Delete</b> Recipe
@@ -52,4 +52,24 @@ Install dependencies
 ![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 ![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
+## Gallery
+- ### Home page
+<p align="center"><img src="GalleryPhotos/snap1.png" width = 80%></p><br>
 
+- ### Features
+<p align="center"><img src="GalleryPhotos/snap2.png" width = 80%></p><br>
+
+- ### Add Recipe Card
+<p align="center"><img src="GalleryPhotos/snap3.png" width = 80%></p><br>
+
+- ### Live changes in Recipe Card
+<p align="center"><img src="GalleryPhotos/snap4.png" width = 80%></p><br>
+
+- ### My recipes page
+<p align="center"><img src="GalleryPhotos/snap5.png" width = 80%></p><br>
+
+- ### Features page
+<p align="center"><img src="GalleryPhotos/snap6.png" width = 80%></p><br>
+
+- ### Shared Recipe Page
+<p align="center"><img src="GalleryPhotos/snap7.png" width = 80%></p><br>
