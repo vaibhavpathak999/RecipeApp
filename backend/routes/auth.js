@@ -123,7 +123,7 @@ router.post('/reset-password',(req,res)=>{
                      text:"Welcome again to MyRecipe Diary. We know you are facing problem in accessing your account.",
                      html:`
                      <p>You requested for password reset</p>
-                     <h5>click in this <a href="http://localhost:3000/reset/${token}">link</a> to reset password</h5>
+                     <h5>click in this <a href="https://recipechallengeapp.herokuapp.com/reset/${token}">link</a> to reset password</h5>
                      `
                  }
                  sgMail
